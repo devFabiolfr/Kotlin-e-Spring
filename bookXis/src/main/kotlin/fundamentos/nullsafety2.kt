@@ -1,4 +1,9 @@
 package fundamentos
 
-class nullsafety2 {
+fun main () {
+    val pessoa: Pessoa? = null
+
+    println(pessoa!!.nome)
+    println('Final do Codigo')
+
 }
