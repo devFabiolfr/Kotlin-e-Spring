@@ -1,5 +1,6 @@
 package com.bookXis.bookXis.controller
 
+import com.bookXis.bookXis.model.CustomModel
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -8,14 +9,10 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 
 class CustomController {
-    @GetMapping
-    fun helloWorld(): String {
-        return "CustomController hello world"
-    }
 
-    @GetMapping("/2")
-    fun helloWorld2(): String {
-        return "CustomController hello world 2"
+    @GetMapping
+    fun getCustomer(): CustomModel {
+        return CustomModel("1","Gustavo","email@gmail.com")
     }
 
 }
